@@ -15,7 +15,7 @@ export default function NavTabs() {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <nav aria-label="Main" className="w-full md:w-md">
+    <nav aria-label="Main" className="w-full md:w-72 lg:w-md">
       <div className="relative h-2 rounded-full bg-blush shadow-sm">
         <div
           className="absolute inset-y-0 left-0 w-1/5 px-1 transition-transform duration-500 ease-out"

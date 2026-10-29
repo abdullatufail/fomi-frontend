@@ -1,4 +1,4 @@
-export const models = ["Fomi Lumen", "Fomi Studio", "Fomi Pulse"];
+export const models = ["Lumen", "Studio", "Pulse"];
 
 export const ratios = ["1:1", "3:4", "4:3", "16:9", "9:16"];
 
@@ -64,7 +64,7 @@ export const initialGenerations = [
   {
     id: "gen-redhead",
     mode: "image",
-    model: "Fomi Lumen",
+    model: "Lumen",
     ratio: "3:4",
     prompt:
       "A professional portrait photograph of a smiling 31-year-old redheaded woman with warm brown eyes and softly tousled auburn hair framing her face. She is turned slightly towards the viewer, offering a genuine and approachable expression. She is wearing a cream-colored cashmere sweater and delicate gold earrings. The background is a softly blurred expanse of muted gray and beige tones, suggesting a modern art gallery. There is subtle directional lighting",
@@ -73,7 +73,7 @@ export const initialGenerations = [
   {
     id: "gen-portraits",
     mode: "image",
-    model: "Fomi Studio",
+    model: "Studio",
     ratio: "3:4",
     prompt:
       "Editorial fashion portraits of young women, natural window light, pastel backdrops, shot on 85mm, soft skin texture, calm and confident expressions",
@@ -82,7 +82,7 @@ export const initialGenerations = [
   {
     id: "gen-landscapes",
     mode: "video",
-    model: "Fomi Pulse",
+    model: "Pulse",
     ratio: "3:4",
     prompt:
       "Slow cinematic drone shots over mountain valleys and glacier lakes, early morning fog rolling between the peaks, ending on a clear starry night sky",
@@ -91,7 +91,7 @@ export const initialGenerations = [
   {
     id: "gen-cats",
     mode: "image",
-    model: "Fomi Lumen",
+    model: "Lumen",
     ratio: "3:4",
     prompt: "Cozy lifestyle photos of cats at home, playful poses, warm afternoon light, shallow depth of field",
     images: toImages("gen-cats", cats),
