@@ -1,26 +1,87 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --cream: #fbfaf6;
+  --blush: #f8ede7;
+  --blush-light: #faf4f1;
+  --petal: #f3e1da;
+  --card: #ffffff;
+  --line: #ecdfd8;
+  --ink: #1b1715;
+  --muted: #8c827d;
+  --salmon: #e69c87;
+  --clay: #d67a5f;
+}
+
+.dark {
+  --cream: #131110;
+  --blush: #1f1a18;
+  --blush-light: #1a1614;
+  --petal: #3a2c27;
+  --card: #2a2320;
+  --line: #352c28;
+  --ink: #f4ede9;
+  --muted: #a3958f;
+  --salmon: #e08e77;
+  --clay: #e08e77;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-cream: var(--cream);
+  --color-blush: var(--blush);
+  --color-blush-light: var(--blush-light);
+  --color-petal: var(--petal);
+  --color-card: var(--card);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-salmon: var(--salmon);
+  --color-clay: var(--clay);
+
+  --font-sans: var(--font-poppins);
+
+  --container-app: 100rem;
+
+  --animate-fade-up: fade-up 0.4s ease-out both;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
+@utility no-scrollbar {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  transition: background-color 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
