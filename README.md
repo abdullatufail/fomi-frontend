@@ -1,6 +1,4 @@
-# Fomi — AI generation workspace
-
-Part A of the Fomi frontend assessment: the image/video generation page built from the mockup with Next.js, JavaScript and Tailwind CSS.
+# Fomi 
 
 ## Running it
 
